@@ -1,0 +1,20 @@
+Steps to create App Manifest : 
+1. Add manifest.json file :
+{
+  "name": "Your Great Site",
+  "short_name": "Site 😎",
+  "description": "Learn how to create and share something or other.",
+  "start_url": "/?homescreen=1",
+  "background_color": "#000000",
+  "theme_color": "#0f4a73",
+  "icons": [{
+    "src": "icon-256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }]
+}
+2. Add following to index.html :
+ <link rel="manifest" href="manifest.json" />
+3. Add <meta name="theme-color" content="red" />
+4. Add serive worker file  sw.js:
+self.addEventListener('fetch', function(event) {});
